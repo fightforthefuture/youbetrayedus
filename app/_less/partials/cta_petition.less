@@ -1,0 +1,104 @@
+.cta {
+    padding-top: 5rem;
+    background: white;
+
+    h1 {
+        text-align: center;
+        max-width: 90rem;
+        display: block;
+        margin: 0px auto;
+    }
+
+    h3 {
+        text-align: center;
+        max-width: 90rem;
+        display: block;
+        margin: 0px auto 2rem auto;
+        font-weight: bold;
+    }
+
+    p {
+        font-weight: 600;
+        font-size: 2rem;
+        max-width: 90rem;
+        margin: 3rem auto;
+        text-align: center;
+    }
+
+    .highlight {
+        background: #2a3d59;
+        color: white;
+
+        padding: 2rem 0 15rem 0;
+
+        #petition {
+            max-width: 50rem;
+            margin: 0px auto;
+            text-align: center;
+
+            a {
+                color: #7388a8;
+                font-weight: 600;
+            }
+
+            input {
+                display: inline-block;
+                margin: 0px auto 0rem auto;
+                padding: 1rem;
+                font-size: 2rem;
+                border: 1px solid #888;
+                width: 33.3333333333333%;
+                border-width: 1px 1px 1px 0;
+
+                &[name="first_name"] {
+                    border-width: 1px 1px 1px 1px;
+                }
+                &[name="address1"] {
+                    display: none;
+                }
+            }
+            textarea {
+                border: 1px solid #888;
+                width: 100%;
+                height: 11rem;
+                padding: 1rem;
+                font-size: 1.5rem;
+                font-family: @body-font;
+            }
+
+            button {
+                box-sizing: border-box;
+                display: inline-block;
+                height: 5rem;
+                border: 0px none transparent;
+                color: #FFF;
+                font-size: 2.3rem;
+                font-weight: bold;
+                border-radius: .5rem;
+                padding: 0px 3rem;
+                background-color: #4d94ff;
+                cursor: pointer;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin: .2rem 0 2rem 0;
+                width: 100%;
+                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3486ff+0,2c66bf+100 */
+                background: -moz-linear-gradient(top, #3486ff 0%, #2c66bf 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3486ff), color-stop(100%,#2c66bf)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top, #3486ff 0%,#2c66bf 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top, #3486ff 0%,#2c66bf 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top, #3486ff 0%,#2c66bf 100%); /* IE10+ */
+                background: linear-gradient(to bottom, #3486ff 0%,#2c66bf 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3486ff', endColorstr='#2c66bf',GradientType=0 ); /* IE6-9 */
+            }
+
+            p.disclosure {
+                margin: 0px;
+                font-size: 1.2rem;
+                font-weight: 300;
+                color: #7388a8;
+            }
+        }
+
+    }
+}
