@@ -11,28 +11,43 @@
         security and civil rights in exchange for government handouts and protection.
     </p>
     <div class="highlight">
-        <h3>Tell them why they're on the wrong side of history.</h3>
-        <div id="petition">By supporting CISA, you are betraying your customers and selling out freedom on the Internet to a government obsessed with control. It's pathetic that you want legal immunity for violating your own privacy agreements with customers. Shame on you.</div>
-        <script type="text/javascript">
-            new EmailPetitionController({
-                inject: '#petition',
-                tag:    'test-petition',
-                buttonText: 'Email them',
-                required: ['email', 'zip', 'first_name'],
-                orgs: { fftf: '<a href="https://www.fightforthefuture.org">Fight for the Future</a> will deliver your email and send you campaign updates. <a href="https://www.fightforthefuture.org/privacy">Privacy</a>' },
-                onSend: function(formData)
-                {
-                    document.getElementById('petition').innerHTML = '<p>Thanks!</p>';
+        <div id="action">
+            <h3>Tell them why they're on the wrong side of history.</h3>
+            <div id="petition">By supporting CISA, you are betraying your customers and selling out freedom on the Internet to a government obsessed with control. It's pathetic that you want legal immunity for violating your own privacy agreements with customers. Shame on you.</div>
+            <script type="text/javascript">
+                new EmailPetitionController({
+                    inject: '#petition',
+                    tag:    'youbetrayedus',
+                    buttonText: 'Email them',
+                    required: ['email', 'zip', 'first_name'],
+                    orgs: { fftf: '<a href="https://www.fightforthefuture.org">Fight for the Future</a> will deliver your email and send you campaign updates. <a href="https://www.fightforthefuture.org/privacy">Privacy</a>' },
+                    onSend: function(formData)
+                    {
+                        document.getElementById('action').style.display = 'none';
+                        document.getElementById('thanks').style.display = 'block';
 
-                    new CallModalController({
-                        required:   ['email', 'name', 'zip'],
-                        campaign:   'cisa-cloture-fax',
-                        zip:        formData.zip,
-                        callScript: 'CISA is really a bad law. Please oppose it!',
-                    });
-                }
-            });
-        </script>
+                        new CallModalController({
+                            required:   ['email', 'name', 'zip'],
+                            campaign:   'cisa-cloture-fax',
+                            zip:        formData.zip,
+                            cta:        'Congress needs to know that it doesn\'t matter what companies want—CISA isn\'t going to fly with the American people.',
+                            callScript: 'Please oppose CISA, the Cybersecurity Information Sharing Act. CISA won\'t fix the cybersecurity problems we face in the U.S.—it will only lead to more warrantless mass surveillance of millions of Americans. We need real cybersecurity legislation, and it\'s not CISA.',
+                            shareText:  'We\'re up against some of the most powerful corporate lobbyists in the country, but that hasn\'t stopped us before. If a critical mass of citizens speak out against CISA, our voices will be impossible to ignore.',
+                        });
+                    }
+                });
+            </script>
+        </div>
+        <div id="thanks" style="display: none;">
+            <h3>Thanks for taking action!</h3>
+            <p>
+                We're up against some of the most powerful corporate lobbyists in the country, but that hasn't stopped us before. If a critical mass of citizens speak out against CISA, our voices will be impossible to ignore.
+            </p>
+            <div class="share">
+                <button class="social facebook">Share this page</button>
+                <button class="social twitter">Tweet this page</button>
+            </div>
+        </div>
     </div>
 </div>
 

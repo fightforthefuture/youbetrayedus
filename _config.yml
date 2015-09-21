@@ -4,8 +4,10 @@
 # (production settings go in _config.build.yml)
 
 name: Betrayed by Tech
-url: 'www.youbetrayedus.org'
-description: FORMAL CAMPAIGN DESCRIPTION HERE
+url: 'https://www.youbetrayedus.org'
+fbtitle: 'Big tech just betrayed us.'
+description: 'Apple and Microsoft actually WANT to give your data to the N.S.A.'
+twittertext: 'Apple and Microsoft actually WANT to give your data to the N.S.A.'
 timezone: America/Los_Angeles
 googleanalytics: UA-XXXXXXXX-XX
 author:
