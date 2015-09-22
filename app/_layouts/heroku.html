@@ -78,6 +78,72 @@
     </blockquote>
     <p><strong>&laquo; <a href="/">Back to youbetrayedus.org...</a></strong></p>
 </div>
+
+<style type="text/css">
+    div.social-buttons {
+        height: 115px;
+        left: 0;
+        overflow: hidden;
+        position: fixed;
+        top: calc((100% - 115px) / 2);
+        width: 100px;
+    }
+
+    @media screen and (max-width: 1100px) {
+        div.social-buttons {
+            width: 33px;
+        }
+    }
+    @media screen and (max-width:850px) {
+        div.social-buttons {
+            display: none;
+        }
+    }
+
+    div.social-buttons a {
+        background-repeat: no-repeat;
+        display: block;
+        height: 33px;
+        font-family: Verdana, Helvetica, sans-serif;
+        color: white;
+        line-height: 33px;
+        margin: 0 0 8px;
+        padding: 0 0 0 37px;
+        text-decoration: none;
+        width: 100%;
+        font-weight: bold;
+    }
+
+    div.social-buttons a.facebook {
+        background-color: #39579a;
+        background-image: url(/images/social/icon-fb.gif);
+    }
+
+    div.social-buttons a.twitter {
+        background-color: #02aced;
+        background-image: url(/images/social/icon-twitter.gif);
+    }
+
+    div.social-buttons a.email {
+        background-color: #14ac2b;
+        background-image: url(/images/social/icon-email.gif);
+    }
+</style>
+<div class="social-buttons">
+    <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.youbetrayedus.org/heroku/" class="facebook">
+        Share
+    </a>
+
+    <a target="_blank" href="https://twitter.com/intent/tweet?related=fightfortheftr&text=Why%20we're%20leaving%20Heroku%20https%3A%2F%2Fwww.youbetrayedus.org%2Fheroku%2F" class="twitter">
+        Tweet
+    </a>
+
+    <a target="_blank" href="mailto:?subject=Heroku boycott&body=https%3A%2F%2Fwww.youbetrayedus.org%2Fheroku%2F" class="email">
+        Email
+    </a>
+</div>
+
+
 {% include footer.html %}
 
 
