@@ -16,6 +16,7 @@
     "postinstall": "bundle",
     "start": "grunt",
     "verbose": "grunt dev -vvv",
+    "server": "grunt server",
     "build": "grunt build",
     "deploy": "./deploy-ghpages.sh"
   },
