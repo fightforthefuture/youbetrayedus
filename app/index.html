@@ -1,4 +1,11 @@
+---
+layout: default
+---
+{% include cta_petition.html %}
+{% include logos.html %}
+
 <div class="content">
+<section class="copy">
     <h2><a href="/heroku"><strong>We are boycotting Salesforce / Heroku. Click here to learn more.</strong></a></h2>
     <h3>These companies sold us out.</h3>
     <p>
@@ -24,9 +31,11 @@
         “cybersecurity” bill. Congress has been blindly scrambling to react to the
         OPM hacks, and their solution is a giveaway to the NSA and giant corporations:
     </p>
-    <ul>
+</section>
+<section class="whats-wrong">
+    <ul class="copy">
         <li>
-            All privacy policies effectively null and void. Companies can share any
+            All privacy policies effectively null and void. Companies can shareany
             private user data with the government, without a warrant, as long as
             the government says it is being used for a “cybersecurity” purpose.
         </li>
@@ -44,34 +53,33 @@
             from the government, including private information about their competitors.
         </li>
     </ul>
+</section>
     <h3>Learn more about CISA</h3>
-    <p>
-        <strong>
-            <a href="https://www.eff.org/deeplinks/2015/09/amendments-cisa-cybersecurity-bill-fail-all-regards" target="_blank">EFF explains why the Amendments won't fix CISA</a>
-        </strong>
-    </p>
-    <p>
-        <strong>
-            <a href="https://www.newamerica.org/oti/coalition-letter-from-55-civil-society-groups-security-experts-and-academics-opposing-cisa/" target="_blank">55 security experts, academics, and civil groups explain why they oppose CISA</a>
-        </strong>
-    </p>
-    <p>
-        <strong>
-            <a href="https://www.faxbigbrother.com/#whatiscisa">Fax Big Brother: why CISA sucks for online privacy</a>
-        </strong>
-    </p>
+    <ul class="learn-more">
+        <li>
+            <a href="https://www.eff.org/deeplinks/2015/09/amendments-cisa-cybersecurity-bill-fail-all-regards" target="_blank">EFF
+                explains why the Amendments won't fix CISA</a>
+        </li>
+        <li>
+            <a href="https://www.newamerica.org/oti/coalition-letter-from-55-civil-society-groups-security-experts-and-academics-opposing-cisa/" target="_blank">55
+                security experts, academics, and civil groups explain why
+                they oppose CISA</a>
+        </li>
+        <li>
+            <a href="https://www.faxbigbrother.com/#whatiscisa">Fax Big
+                Brother: why CISA sucks for online privacy</a>
+        </li>
+    </ul>
 </div>
 <div class="content dark">
+    <section class="copy">
     <h2>Dial <a href="tel://19852222472">985-222-CISA</a> to call Congress now.</h2>
-    <h3></h3>
     <p>
         Internet users demand <em>meaningful</em> cybersecurity legislation, not more mass
         surveillance. Millions have already spoken out, and there's still time to
         send Congress a clear message. Please call your representatives, and share this page
         to spread the word!
     </p>
-    <div class="share">
-        <button class="social facebook">Share this page</button>
-        <button class="social twitter">Tweet this page</button>
-    </div>
+    {% include share.html %}
+    </section>
 </div>
