@@ -1,11 +1,11 @@
 .content {
-    padding: 3rem 1rem;
+    padding: 2rem 0;
     text-align: center;
 
     h2, h3 {
         text-align: center;
         max-width: 80rem;
-        margin: 0px auto 2rem auto;
+        margin: 0 auto 2rem auto;
     }
     h3 {
         font-weight: bold;
@@ -13,23 +13,44 @@
     p {
         text-align: center;
         max-width: 85rem;
-        margin: 0px auto 2rem auto;
+        margin: 0 auto 2rem auto;
         font-size: 1.8rem;
     }
     ul {
-        list-style-type: disc;
-        max-width: 70rem;
-        margin: 0px auto 2rem auto;
-        background: #fff;
-        padding: 3rem 5rem;
+        list-style: none;
+        max-width: 72ch;
+        margin: 0 auto;
+        padding: 3rem 1.6rem;
+        @media screen and (min-width: @large-phone) {
+            padding: 3rem 5rem;
+        }
 
-        li {
-            font-family: @quote-font;
-            text-align: center;
-            font-size: 2.1rem;
-            margin: 0px auto 2rem auto;
+    }
+
+    li {
+        font-family: @quote-font;
+        font-size: 2.1rem;
+        margin: 2rem auto 0;
+        &:first-child {
+            margin-top: 0;
         }
     }
+
+    .whats-wrong {
+        background: #fff;
+        margin-bottom: 5rem;
+        padding-left: 3rem;
+        text-align: left;
+
+        ul {
+            list-style-type: disc;
+        }
+    }
+
+    .learn-more {
+        font-weight: 600;
+    }
+
     strong {
         font-weight: 600;
     }
@@ -38,18 +59,24 @@
     }
 
     blockquote {
+        box-shadow: fadeout(@black, 90%) 0 0 2rem 0;
         font-family: @quote-font;
-        text-align: center;
         font-size: 2.1rem;
         max-width: 90rem;
-        margin: 0px auto 2rem auto;
+        margin: 0 auto 2rem auto;
         background: #fff;
-        text-align: left;
-        padding: 7rem 1rem;
+        padding: 3rem 1.6rem;
+
+        @media screen and (min-width: @large-phone) {
+            padding: 7rem 4rem
+        }
+
+        @media screen and (min-width: @small-tablet) {
+            padding: 7rem 9rem;
+        }
 
         p {
             text-align: left;
-            max-width: 70rem;
         }
     }
 
@@ -62,6 +89,5 @@
             font-weight: 600;
         }
     }
-
 
 }
