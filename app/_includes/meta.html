@@ -1,6 +1,7 @@
 {% capture title %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}{% endcapture %}
 {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
 {% capture fbtitle %}{% if page.fbtitle %}{{ page.fbtitle }}{% else %}{{ site.fbtitle }}{% endif %}{% endcapture %}
+{% capture fbimage %}{% if page.fbimage %}{{ page.fbimage }}{% else %}{{ site.url }}/image.png{% endif %}{% endcapture %}
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,7 +12,7 @@
 <!-- *** social meta *** -->
 <!-- facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:image" content="{{ site.url }}/images/share.png" />
+<meta property="og:image" content="{{ fbimage }}" />
 <meta property="og:image:width" content="500" />
 <meta property="og:image:height" content="500" />
 <meta property="og:site_name" content="{{ site.name }}" />
@@ -27,7 +28,7 @@
 <meta name="twitter:site" content="{{ site.author.twitter }}">
 <meta name="twitter:title" content="{{ title }}">
 <meta name="twitter:description" content="{{ description }}"/>
-<meta name="twitter:image:src" content="{{ site.url }}/image.png">
+<meta name="twitter:image:src" content="{{ fbimage }}">
 <meta name="twitter:domain" content="{{ site.url | remove:'http://' | remove:'https://' }}">
 <meta name="twitter:account_id" content="{{ site.author.twitterid }}" />
 
