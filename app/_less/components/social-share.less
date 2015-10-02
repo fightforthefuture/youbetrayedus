@@ -77,3 +77,51 @@ button.social {
     }
 
 }
+div.social-buttons {
+    height: 115px;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 150px;
+    width: 100px;
+}
+
+@media screen and (max-width: 1100px) {
+    div.social-buttons {
+        width: 33px;
+    }
+}
+@media screen and (max-width:850px) {
+    div.social-buttons {
+        display: none;
+    }
+}
+
+div.social-buttons a {
+    background-repeat: no-repeat;
+    display: block;
+    height: 33px;
+    font-family: Verdana, Helvetica, sans-serif;
+    color: white;
+    line-height: 33px;
+    margin: 0 0 8px;
+    padding: 0 0 0 37px;
+    text-decoration: none;
+    width: 100%;
+    font-weight: bold;
+}
+
+div.social-buttons a.facebook {
+    background-color: #39579a;
+    background-image: url(/images/social/icon-fb.gif);
+}
+
+div.social-buttons a.twitter {
+    background-color: #02aced;
+    background-image: url(/images/social/icon-twitter.gif);
+}
+
+div.social-buttons a.email {
+    background-color: #14ac2b;
+    background-image: url(/images/social/icon-email.gif);
+}
