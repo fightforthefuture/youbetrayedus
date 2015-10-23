@@ -1,0 +1,13 @@
+<div class="social-buttons">
+    <a target="_blank" href="https://www.facebook.com/sharer.php?u={{ site.url | uri_escape }}{{ page.url | uri_escape }}" class="facebook">
+        Share
+    </a>
+
+    <a target="_blank" href="https://twitter.com/intent/tweet?related=fightfortheftr&amp;hashtags=CISA&amp;text={{ page.twittertext | uri_escape }}%20{{ site.url | uri_escape }}{{ page.url | uri_escape }}" class="twitter">
+        Tweet
+    </a>
+
+    <a target="_blank" href="mailto:?subject={{ page.title | uri_escape }}&amp;body={{ page.description | uri_escape }}%0A{{ site.url | uri_escape }}{{ page.url | uri_escape}}" class="email">
+        Email
+    </a>
+</div>
