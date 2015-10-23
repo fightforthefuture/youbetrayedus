@@ -18,29 +18,7 @@ twittertext: .@TMobile leaked millions of social security numbers. Now they’re
         <div id="action">
             <h3>Sign our petition to T-Mobile asking them to stand up for their customers’ privacy and oppose CISA.</h3>
             <div id="petition">CISA is an assault on Internet privacy and it will actually make cybersecurity worse, not better. If you care about protecting your customers and preventing future hacks you should make it clear that you oppose CISA and any other attempt to give corporations immunity for negligent security in exchange for handing over data to the government.  </div>
-            <script type="text/javascript">
-                new EmailPetitionController({
-                    el:         '#petition',
-                    page_id:    'youbetrayedus-experian',
-                    buttonText: 'Sign now!',
-                    required: ['email', 'zip', 'first_name'],
-                    orgs: { fftf: '<a href="https://www.fightforthefuture.org">Fight for the Future</a> will deliver your signature and send you campaign updates. <a href="https://www.fightforthefuture.org/privacy">Privacy</a>' },
-                    onSend: function(formData)
-                    {
-                        document.getElementById('action').style.display = 'none';
-                        document.getElementById('thanks').style.display = 'block';
-
-                        new CallModalController({
-                            required:   ['email', 'name', 'zip'],
-                            campaign:   'cisa-cloture-fax',
-                            zip:        formData.zip,
-                            cta:        'Congress needs to know that it doesn\'t matter what companies want—CISA isn\'t going to fly with the American people.',
-                            callScript: 'Please oppose CISA, the Cybersecurity Information Sharing Act. CISA won\'t fix the cybersecurity problems we face in the U.S.—it will only lead to more warrantless mass surveillance of millions of Americans. We need real cybersecurity legislation, and it\'s not CISA.',
-                            shareText:  'We\'re up against some of the most powerful corporate lobbyists in the country, but that hasn\'t stopped us before. If a critical mass of citizens speak out against CISA, our voices will be impossible to ignore.',
-                        });
-                    }
-                });
-            </script>
+            {% include petition.html target='tmobile' %}
         </div>
         <div id="thanks" style="display: none;">
             <h3>Thanks for taking action!</h3>
@@ -63,7 +41,6 @@ twittertext: .@TMobile leaked millions of social security numbers. Now they’re
 
 <div class="content">
 <section class="copy">
-    <!--<h2><a href="/heroku"><strong>We are boycotting Salesforce / Heroku. Click here to learn more.</strong></a></h2>-->
 
     <h3>It's time for T-Mobile to show that they care about protecting their customers. </h3>
     <p>
@@ -71,40 +48,9 @@ twittertext: .@TMobile leaked millions of social security numbers. Now they’re
     </p>
 </section>
 {% include bullets.html %}
-    <h3>Learn more about CISA</h3>
-    <ul class="learn-more">
-        <li>
-            <a href="https://www.decidethefuture.org" target="_blank">
-                See where your Congresspeople stand on surveillance legislation
-            </a>
-        </li>
-        <li>
-            <a href="https://www.eff.org/deeplinks/2015/09/amendments-cisa-cybersecurity-bill-fail-all-regards" target="_blank">EFF
-                explains why the Amendments won't fix CISA</a>
-        </li>
-        <li>
-            <a href="https://www.newamerica.org/oti/coalition-letter-from-55-civil-society-groups-security-experts-and-academics-opposing-cisa/" target="_blank">55
-                security experts, academics, and civil groups explain why
-                they oppose CISA</a>
-        </li>
-        <li>
-            <a href="https://www.faxbigbrother.com/#whatiscisa">Fax Big
-                Brother: why CISA sucks for online privacy</a>
-        </li>
-    </ul>
+{% include learn-more-bullets.html %}
 </div>
-<div class="content dark">
-    <section class="copy">
-    <h2>Dial <a href="tel://19852222472">985-222-CISA</a> to call Congress now.</h2>
-    <p>
-        Internet users demand <em>meaningful</em> cybersecurity legislation, not more mass
-        surveillance. Millions have already spoken out, and there's still time to
-        send Congress a clear message. Please call your representatives, and share this page
-        to spread the word!
-    </p>
-    {% include share.html %}
-    </section>
-</div>
+{% include call-congress.html %}
 <div class="social-buttons">
     <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.youbetrayedus.org/tmobile/" class="facebook">
         Share

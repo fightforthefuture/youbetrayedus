@@ -3,7 +3,7 @@ layout: default
 title: Where does Hillary stand on cybersecurity?
 fbtitle: Where does Hillary stand on cybersecurity?
 fbimage: https://www.youbetrayedus.org/images/hillary.jpg
-description: 'Her continued silence on CISA can''t be a good thing.'
+description: 'Her continued silence on CISA can’t be a good thing.'
 ---
 <style type="text/css">
     ul.departments {
@@ -52,40 +52,9 @@ on United States cybersecurity faltering under her lead as Secretary of State, a
             <div id="petition">Dear Hillary Clinton,
 Please take a stand against CISA, a dangerous surveillance bill that will only damage cybersecurity in the United States. Many citizens, experts, and companies have come out against this legislation because it will expose more Americans' private information to foreign hackers and government monitoring. Opposing CISA will show that your campaign is turning a corner on cybersecurity competence and working to protect people's civil liberties.
 Thank you!</div>
-            <script type="text/javascript">
-                new EmailPetitionController({
-                    el:         '#petition',
-                    page_id:    'youbetrayedus-hillary',
-                    buttonText: 'Sign now!',
-                    required: ['email', 'zip', 'first_name'],
-                    orgs: { fftf: '<a href="https://www.fightforthefuture.org">Fight for the Future</a> will deliver your signature and send you campaign updates. <a href="https://www.fightforthefuture.org/privacy">Privacy</a>' },
-                    onSend: function(formData)
-                    {
-                        document.getElementById('action').style.display = 'none';
-                        document.getElementById('thanks').style.display = 'block';
-
-                        new CallModalController({
-                            required:   ['email', 'name', 'zip'],
-                            campaign:   'cisa-cloture-fax',
-                            zip:        formData.zip,
-                            cta:        'Congress needs to know that it doesn\'t matter what companies want—CISA isn\'t going to fly with the American people.',
-                            callScript: 'Please oppose CISA, the Cybersecurity Information Sharing Act. CISA won\'t fix the cybersecurity problems we face in the U.S.—it will only lead to more warrantless mass surveillance of millions of Americans. We need real cybersecurity legislation, and it\'s not CISA.',
-                            shareText:  'We\'re up against some of the most powerful corporate lobbyists in the country, but that hasn\'t stopped us before. If a critical mass of citizens speak out against CISA, our voices will be impossible to ignore.',
-                        });
-                    }
-                });
-            </script>
+            {% include petition.html target='hillary' %}
         </div>
-        <div id="thanks" style="display: none;">
-            <h3>Thanks for taking action!</h3>
-            <p>
-                We're up against some of the most powerful corporate lobbyists in the country, but that hasn't stopped us before. If a critical mass of citizens speak out against CISA, our voices will be impossible to ignore.
-            </p>
-            <div class="share">
-                <button class="social facebook">Share this page</button>
-                <button class="social twitter">Tweet this page</button>
-            </div>
-        </div>
+        {% include thanks.html %}
     </div>
 </div>
 <div class="logos">
@@ -93,10 +62,8 @@ Thank you!</div>
 </div>
 
 
-
 <div class="content">
 <section class="copy">
-    <!--<h2><a href="/heroku"><strong>We are boycotting Salesforce / Heroku. Click here to learn more.</strong></a></h2>-->
     <h2>CISA is the opposite of cybersecurity.</h2>
     <h3>Blanket immunity rewards security incompetence.</h3>
     <p>
@@ -152,18 +119,8 @@ Thank you!</div>
 </section>
 </div>
 
-<div class="content dark">
-    <section class="copy">
-    <h2>Dial <a href="tel://19852222472">985-222-CISA</a> to call Congress now.</h2>
-    <p>
-        Internet users demand <em>meaningful</em> cybersecurity legislation, not more mass
-        surveillance. Millions have already spoken out, and there's still time to
-        send Congress a clear message. Please call your representatives, and share this page
-        to spread the word!
-    </p>
-    {% include share.html %}
-    </section>
-</div>
+{% include call-congress.html %}
+
 <div class="social-buttons">
     <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.youbetrayedus.org/hillary/" class="facebook">
         Share

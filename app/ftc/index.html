@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Why isn't the FTC doing its job?
 fbtitle: Why isn't the FTC doing its job?
 fbimage: https://www.youbetrayedus.org/images/picard.jpg
@@ -62,40 +61,9 @@ description: 'They could put a stop to foreign hackers by holding companies acco
         <div id="action">
             <h3>TELL THE FTC: Make T-Mobile and Experian pay for leaking our data!</h3>
             <div id="petition">In yet another case of security negligence, T-Mobile and Experian have leaked millions of people's private information to identity thieves. Meanwhile these companies have been lobbying for immunity under CISA. The FTC should investigate these companies and hold them accountable for any negligence. These breaches could have been prevented, but for too long companies have had no incentive to take their customers' privacy seriously. Please do your job, enforce the law, and send companies a message that privacy isn't optional—it's a human right.</div>
-            <script type="text/javascript">
-                new EmailPetitionController({
-                    el:         '#petition',
-                    page_id:    'youbetrayedus-ftc',
-                    buttonText: 'EMAIL THE FTC',
-                    required: ['email', 'zip', 'first_name'],
-                    orgs: { fftf: '<a href="https://www.fightforthefuture.org">Fight for the Future</a> will deliver your signature and send you campaign updates. <a href="https://www.fightforthefuture.org/privacy">Privacy</a>' },
-                    onSend: function(formData)
-                    {
-                        document.getElementById('action').style.display = 'none';
-                        document.getElementById('thanks').style.display = 'block';
-
-                        new CallModalController({
-                            required:   ['email', 'name', 'zip'],
-                            campaign:   'cisa-cloture-fax',
-                            zip:        formData.zip,
-                            cta:        'Congress needs to know that it doesn\'t matter what companies want—CISA isn\'t going to fly with the American people.',
-                            callScript: 'Please oppose CISA, the Cybersecurity Information Sharing Act. CISA won\'t fix the cybersecurity problems we face in the U.S.—it will only lead to more warrantless mass surveillance of millions of Americans. We need real cybersecurity legislation, and it\'s not CISA.',
-                            shareText:  'We\'re up against some of the most powerful corporate lobbyists in the country, but that hasn\'t stopped us before. If a critical mass of citizens speak out against CISA, our voices will be impossible to ignore.',
-                        });
-                    }
-                });
-            </script>
+            {% include petition.html target='ftc' %}
         </div>
-        <div id="thanks" style="display: none;">
-            <h3>Thanks for taking action!</h3>
-            <p>
-                We're up against some of the most powerful corporate lobbyists in the country, but that hasn't stopped us before. If a critical mass of citizens speak out against CISA, our voices will be impossible to ignore.
-            </p>
-            <div class="share">
-                <button class="social facebook">Share this page</button>
-                <button class="social twitter">Tweet this page</button>
-            </div>
-        </div>
+        {% include thanks.html %}
     </div>
     <script type="text/javascript">
         if (document.referrer.indexOf('reddit') != -1) {
@@ -104,17 +72,10 @@ description: 'They could put a stop to foreign hackers by holding companies acco
         }
     </script>
 </div>
-<!--
-<div class="logos">
-    <img src="../images/doucheceo.jpg"/>
-</div>
--->
-
 
 
 <div class="content">
 <section class="copy">
-    <!--<h2><a href="/heroku"><strong>We are boycotting Salesforce / Heroku. Click here to learn more.</strong></a></h2>-->
     <h2>CISA is the opposite of cybersecurity.</h2>
     <h3>Blanket immunity rewards security incompetence.</h3>
     <p>
@@ -169,19 +130,8 @@ description: 'They could put a stop to foreign hackers by holding companies acco
     </p>
 </section>
 </div>
+{% include call-congress.html %}
 
-<div class="content dark">
-    <section class="copy">
-    <h2>Dial <a href="tel://19852222472">985-222-CISA</a> to call Congress now.</h2>
-    <p>
-        Internet users demand <em>meaningful</em> cybersecurity legislation, not more mass
-        surveillance. Millions have already spoken out, and there's still time to
-        send Congress a clear message. Please call your representatives, and share this page
-        to spread the word!
-    </p>
-    {% include share.html %}
-    </section>
-</div>
 <div class="social-buttons">
     <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.youbetrayedus.org/ftc/" class="facebook">
         Share
